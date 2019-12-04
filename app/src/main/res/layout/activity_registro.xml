@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:gravity="center_horizontal"
+    android:background="#123456"
+    tools:context=".Registro">
+
+<LinearLayout
+    android:gravity="center_horizontal"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="127dp"
+        android:layout_marginTop="50dp"
+        app:srcCompat="@drawable/registro"/>
+
+
+    <EditText
+        android:id="@+id/txtNomUsu"
+        android:layout_width="190dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="10dp"
+        android:paddingLeft="2dp"
+        android:background="#ffffff"
+        android:hint="@string/usuario"/>
+
+    <EditText
+        android:id="@+id/txtDisUsu"
+        android:layout_width="190dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="20dp"
+        android:paddingLeft="2dp"
+        android:background="#ffffff"
+        android:hint="@string/distrito"/>
+
+    <EditText
+        android:id="@+id/txtCorUsu"
+        android:layout_width="190dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="20dp"
+        android:paddingLeft="2dp"
+        android:background="#ffffff"
+        android:hint="@string/correo"/>
+
+    <EditText
+        android:id="@+id/txtPasUsu"
+        android:layout_width="190dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="20dp"
+        android:ems="10"
+        android:paddingLeft="2dp"
+        android:background="#ffffff"
+        android:hint="@string/password"
+        android:inputType="textPassword" />
+
+    <Button
+        android:id="@+id/btnGrabarUsu"
+        android:layout_width="206dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="20dp"
+        android:background="#04ea00"
+        android:text="@string/registrar"/>
+</LinearLayout>
+
+
+</LinearLayout>

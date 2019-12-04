@@ -1,0 +1,368 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    tools:context=".AlimentosMacros">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/appbar"
+
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:theme="@style/AppTheme.AppBarOverlay"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar_Alimentos"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="#E6D82842"
+            app:navigationIcon="?attr/actionModeCloseDrawable"
+            app:popupTheme="@style/AppTheme.PopupOverlay"
+            app:title="Alimentos"></androidx.appcompat.widget.Toolbar>
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#B7FCD999">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/Ly_MAcro"
+            android:layout_width="413dp"
+            android:layout_height="592dp"
+            android:layout_marginTop="100dp"
+            android:background="#8FFFD600"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="1.0">
+
+            <com.google.android.material.floatingactionbutton.FloatingActionButton
+                android:id="@+id/Btn_Buscar"
+                android:layout_width="wrap_content"
+                android:layout_height="56dp"
+                android:layout_margin="16dp"
+                android:layout_marginTop="32dp"
+                android:layout_marginEnd="32dp"
+                android:layout_marginBottom="32dp"
+                android:src="@drawable/busqueda"
+                app:backgroundTint="#F2F80000"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/Ly_Cal"
+                android:layout_marginRight="32dp" />
+
+            <TextView
+                android:id="@+id/textView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:text="@string/txt_Macro"
+                android:textSize="24sp"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                android:layout_marginLeft="8dp" />
+
+            <TextView
+                android:id="@+id/txt_Alimento"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="32dp"
+                android:forceDarkAllowed="true"
+                android:text="Alimento"
+                android:textSize="24sp"
+                android:textStyle="bold|italic"
+                android:typeface="serif"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textView"
+                android:layout_marginLeft="16dp" />
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/Ly_Carbo"
+                android:layout_width="0dp"
+                android:layout_height="100dp"
+                android:layout_marginTop="80dp"
+                android:background="#8D0091EA"
+                app:layout_constraintEnd_toStartOf="@+id/Ly_Prote"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/txt_Alimento">
+
+                <TextView
+                    android:id="@+id/txt_Carbos"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:drawableStart="@drawable/carbo"
+                    android:drawablePadding="10dp"
+                    android:gravity="center_vertical"
+                    android:text="@string/txt_Carbo"
+                    android:textSize="14sp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    android:drawableLeft="@drawable/carbo" />
+
+                <TextView
+                    android:id="@+id/txt_carbo"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginTop="16dp"
+                    android:text="@string/txt_textview"
+                    android:textAlignment="center"
+                    android:textSize="18sp"
+                    android:textStyle="bold"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/txt_Carbos"
+                    android:layout_marginLeft="16dp" />
+
+                <TextView
+                    android:id="@+id/txt_med"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="4dp"
+                    android:layout_marginTop="16dp"
+                    android:text="@string/txt_gramos_cont"
+                    android:textAlignment="center"
+                    android:textSize="18sp"
+                    android:textStyle="bold|italic"
+                    app:layout_constraintStart_toEndOf="@+id/txt_carbo"
+                    app:layout_constraintTop_toBottomOf="@+id/txt_Carbos"
+                    android:layout_marginLeft="4dp" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/Ly_Prote"
+                android:layout_width="0dp"
+                android:layout_height="100dp"
+                android:layout_marginTop="80dp"
+                android:background="#BCD89CF8"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toEndOf="@+id/Ly_Carbo"
+                app:layout_constraintTop_toBottomOf="@+id/txt_Alimento">
+
+                <TextView
+                    android:id="@+id/textView5"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:drawableStart="@drawable/proteina"
+                    android:drawablePadding="10dp"
+                    android:gravity="center_vertical"
+                    android:text="@string/txt_Proteina"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    android:drawableLeft="@drawable/proteina" />
+
+                <TextView
+                    android:id="@+id/txt_prote"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginTop="16dp"
+                    android:text="@string/txt_textview"
+                    android:textAlignment="center"
+                    android:textSize="18sp"
+                    android:textStyle="bold"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/textView5"
+                    android:layout_marginLeft="16dp" />
+
+                <TextView
+                    android:id="@+id/txt_med2"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="4dp"
+                    android:layout_marginTop="16dp"
+                    android:text="@string/txt_gramos_cont"
+                    android:textAlignment="center"
+                    android:textSize="18sp"
+                    android:textStyle="bold|italic"
+                    app:layout_constraintStart_toEndOf="@+id/txt_prote"
+                    app:layout_constraintTop_toBottomOf="@+id/textView5"
+                    android:layout_marginLeft="4dp" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/Ly_Grasa"
+                android:layout_width="0dp"
+                android:layout_height="100dp"
+                android:background="#83FF6D00"
+                app:layout_constraintEnd_toStartOf="@+id/Ly_Fibra"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/Ly_Carbo">
+
+                <TextView
+                    android:id="@+id/textView6"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:drawableStart="@drawable/grasa"
+                    android:drawablePadding="10dp"
+                    android:gravity="center_vertical"
+                    android:text="@string/txt_grasas"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    android:drawableLeft="@drawable/grasa" />
+
+                <TextView
+                    android:id="@+id/txt_Grasa"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginTop="16dp"
+                    android:text="@string/txt_textview"
+                    android:textAlignment="center"
+                    android:textSize="18sp"
+                    android:textStyle="bold"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/textView6"
+                    android:layout_marginLeft="16dp" />
+
+                <TextView
+                    android:id="@+id/txt_med4"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="4dp"
+                    android:layout_marginTop="16dp"
+                    android:text="@string/txt_gramos_cont"
+                    android:textAlignment="center"
+                    android:textSize="18sp"
+                    android:textStyle="bold|italic"
+                    app:layout_constraintStart_toEndOf="@+id/txt_Grasa"
+                    app:layout_constraintTop_toBottomOf="@+id/textView6"
+                    android:layout_marginLeft="4dp" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/Ly_Fibra"
+                android:layout_width="0dp"
+                android:layout_height="100dp"
+                android:background="#9264DD17"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/Ly_Grasa"
+                app:layout_constraintTop_toBottomOf="@+id/Ly_Prote">
+
+                <TextView
+                    android:id="@+id/textView7"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:drawableStart="@drawable/fibra"
+                    android:drawablePadding="10dp"
+                    android:gravity="center_vertical"
+                    android:text="@string/txt_Fibra"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    android:drawableLeft="@drawable/fibra" />
+
+                <TextView
+                    android:id="@+id/txt_fibra"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginTop="16dp"
+                    android:text="@string/txt_textview"
+                    android:textAlignment="center"
+                    android:textSize="18sp"
+                    android:textStyle="bold"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/textView7"
+                    android:layout_marginLeft="16dp" />
+
+                <TextView
+                    android:id="@+id/txt_med3"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="4dp"
+                    android:layout_marginTop="16dp"
+                    android:text="@string/txt_gramos_cont"
+                    android:textAlignment="center"
+                    android:textSize="18sp"
+                    android:textStyle="bold|italic"
+                    app:layout_constraintStart_toEndOf="@+id/txt_fibra"
+                    app:layout_constraintTop_toBottomOf="@+id/textView7"
+                    android:layout_marginLeft="4dp" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/Ly_Cal"
+                android:layout_width="0dp"
+                android:layout_height="100dp"
+                android:background="#ADD50000"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="1.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/Ly_Grasa">
+
+                <TextView
+                    android:id="@+id/textView2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="#0CBD3737"
+                    android:drawableStart="@drawable/caloria"
+                    android:drawablePadding="10dp"
+                    android:gravity="center"
+                    android:text="@string/txt_Calorias"
+                    android:textAlignment="center"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    android:drawableLeft="@drawable/caloria" />
+
+                <TextView
+                    android:id="@+id/txt_cal"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="145dp"
+                    android:layout_marginTop="45dp"
+                    android:text="@string/txt_textview"
+                    android:textAlignment="center"
+                    android:textSize="18sp"
+                    android:textStyle="bold"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    android:layout_marginLeft="145dp" />
+
+                <TextView
+                    android:id="@+id/txt_unid"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="4dp"
+                    android:layout_marginTop="45dp"
+                    android:text="@string/txt_kcal"
+                    android:textAlignment="center"
+                    android:textSize="18sp"
+                    android:textStyle="bold"
+                    app:layout_constraintStart_toEndOf="@+id/txt_cal"
+                    app:layout_constraintTop_toTopOf="parent"
+                    android:layout_marginLeft="4dp" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <TextView
+                android:id="@+id/txt_info"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="8dp"
+                android:text="*por cada 100gr."
+                android:textColor="#D50000"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                android:layout_marginRight="8dp" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

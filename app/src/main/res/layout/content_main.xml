@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context="com.example.integrador3.ListaAlimentos"
+    tools:showIn="@layout/activity_lista_alimentos">
+
+    <SearchView
+        android:id="@+id/sv"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:queryHint="Search.."
+        ></SearchView>
+
+    <ListView
+        android:id="@+id/listV_Alimentos"
+        android:layout_below="@+id/sv"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        ></ListView>
+</RelativeLayout>

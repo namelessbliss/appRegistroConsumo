@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/col"
+    tools:context=".Menu">
+
+    <Button
+        android:id="@+id/btn_Alimentos"
+        android:layout_width="321dp"
+        android:layout_height="56dp"
+        android:background="@drawable/input"
+        android:text="ALIMENTOS A CONSUMIR"
+        app:layout_constraintBottom_toTopOf="@+id/btn_Resumen"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btn_Consumo"
+        app:layout_constraintVertical_bias="0.15" />
+
+    <Button
+        android:id="@+id/btn_Resumen"
+        android:layout_width="321dp"
+        android:layout_height="56dp"
+        android:background="@drawable/input"
+        android:text="RESUMEN SEMANAL DE CALORIAS"
+        app:layout_constraintBottom_toTopOf="@+id/btncontrol"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btn_Alimentos"
+        app:layout_constraintVertical_bias="0.809" />
+
+    <Button
+        android:id="@+id/btn_Consumo"
+        android:layout_width="321dp"
+        android:layout_height="56dp"
+        android:background="@drawable/input"
+        android:text="REGISTRO DE CONSUMO"
+        app:layout_constraintBottom_toTopOf="@+id/btn_Alimentos"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnPerfil"
+        app:layout_constraintVertical_bias="0.628" />
+
+    <Button
+        android:id="@+id/btncontrol"
+        android:layout_width="321dp"
+        android:layout_height="56dp"
+        android:background="@drawable/input"
+        android:text="CONTROL METABOLICO"
+        app:layout_constraintBottom_toTopOf="@+id/btnactividades"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btn_Resumen"
+        app:layout_constraintVertical_bias="0.901" />
+
+    <Button
+        android:id="@+id/btnPerfil"
+        android:layout_width="309dp"
+        android:layout_height="59dp"
+        android:layout_marginTop="200dp"
+        android:background="@drawable/input"
+        android:text="PERFIL"
+        app:layout_constraintBottom_toTopOf="@+id/btn_Consumo"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.537" />
+
+    <Button
+        android:id="@+id/btnactividades"
+        android:layout_width="321dp"
+        android:layout_height="56dp"
+        android:background="@drawable/input"
+        android:text="ACTIVIDADES DIARIAS"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btncontrol"
+        app:layout_constraintVertical_bias="0.991" />
+
+    <TextView
+        android:id="@+id/txtNombre"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginLeft="32dp"
+        android:layout_marginTop="100dp"
+        android:shadowColor="#F53285C5"
+        android:text="TextView"
+        android:textSize="30sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
