@@ -30,14 +30,13 @@ public class ResumenConsumo extends AppCompatActivity {
         setContentView(R.layout.activity_resumen_consumo);
         mSqlDb = new BaseDatos(this);
 
-        barChart = (BarChart) findViewById(R.id.chart1);
+        barChart = findViewById(R.id.chart1);
 
         getSetData();
 
     }
 
     private void getSetData() {
-//        int i = 7;
         ArrayList<Consumo> lista = new ArrayList<>();
         lista = mSqlDb.sieteUltimosDiasRegistrados();
         for (int j = 0; j < 7; j++) {
@@ -54,14 +53,11 @@ public class ResumenConsumo extends AppCompatActivity {
                 labels.add(lista.get(j).getFecha());
                 data = new BarData(labels, bardataset);
             }
-
-           // i--;
         }
 
 
-
         barChart.setData(data);
-        barChart.setDescription("Resumen semanal");  // set the description
+        barChart.setDescription("Resumen semanal");
         bardataset.setColors(ColorTemplate.COLORFUL_COLORS);
         barChart.animateY(1000);
     }

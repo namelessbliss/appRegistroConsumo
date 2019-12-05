@@ -199,7 +199,7 @@ public class RegistroConsumo extends AppCompatActivity {
 
         Toast.makeText(this, "Registrado", Toast.LENGTH_SHORT).show();
         Intent intent = new Intent(getApplicationContext(), Menu.class);
-        intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+        intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TOP);
         startActivity(intent);
         finish();
     }

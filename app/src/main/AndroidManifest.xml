@@ -24,7 +24,11 @@
         <activity android:name=".ControlMetabolico" />
         <activity android:name=".Actividades" />
         <activity android:name=".Perfil" />
-        <activity android:name=".Menu" />
+        <activity
+            android:name=".Menu"
+            android:configChanges="orientation"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar" />
         <activity android:name=".CalcularIMC" />
         <activity android:name=".Registro" />
         <activity android:name=".MainActivity">
