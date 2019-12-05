@@ -9,27 +9,75 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".ResumenConsumo"></activity>
+        <activity
+            android:name=".ResumenConsumo"
+            android:parentActivityName=".Menu">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".Menu" />
+        </activity>
         <activity
             android:name=".SeleccionAlimento"
             android:label="Seleccione Alimentos"
-            android:theme="@style/AppTheme.NoActionBar" />
+            android:parentActivityName=".Menu"
+            android:theme="@style/AppTheme.NoActionBar">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".Menu" />
+        </activity>
         <activity
             android:name=".RegistroConsumo"
             android:label="Registro de Consumo"
             android:parentActivityName=".Menu"
             android:theme="@style/AppTheme.NoActionBar" />
-        <activity android:name=".Ejercicios" />
-        <activity android:name=".CalcularRMB" />
-        <activity android:name=".ControlMetabolico" />
-        <activity android:name=".Actividades" />
-        <activity android:name=".Perfil" />
+        <activity
+            android:name=".Ejercicios"
+            android:parentActivityName=".Menu">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".Menu" />
+
+        </activity>
+        <activity
+            android:name=".CalcularRMB"
+            android:parentActivityName=".Menu">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".Menu" />
+        </activity>
+        <activity
+            android:name=".ControlMetabolico"
+            android:parentActivityName=".Menu">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".Menu" />
+        </activity>
+        <activity
+            android:name=".Actividades"
+            android:parentActivityName=".Menu">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".Menu" />
+        </activity>
+        <activity
+            android:name=".Perfil"
+            android:parentActivityName=".Menu">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".Menu" />
+        </activity>
         <activity
             android:name=".Menu"
             android:configChanges="orientation"
             android:screenOrientation="portrait"
             android:theme="@style/AppTheme.NoActionBar" />
-        <activity android:name=".CalcularIMC" />
+        <activity
+            android:name=".CalcularIMC"
+            android:parentActivityName=".Menu">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".Menu" />
+        </activity>
         <activity android:name=".Registro" />
         <activity android:name=".MainActivity">
             <intent-filter>
@@ -41,11 +89,11 @@
         <activity
             android:name=".AlimentosMacros"
             android:label="@string/title_Lista"
-            android:parentActivityName=".ListaAlimentos"
+            android:parentActivityName=".Menu"
             android:theme="@style/AppTheme.NoActionBar">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
-                android:value=".ListaAlimentos" />
+                android:value=".Menu" />
         </activity>
         <activity
             android:name=".ListaAlimentos"

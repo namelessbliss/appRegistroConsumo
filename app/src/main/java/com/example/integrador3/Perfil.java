@@ -73,7 +73,8 @@ public class Perfil extends AppCompatActivity {
         txtimc.setText(myPreferences.getString("IMC","-"));
         txtrmb.setText(myPreferences.getString("RMB","-"));
 
-
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+        getSupportActionBar().setDisplayShowHomeEnabled(true);
 
     }
 }

@@ -32,6 +32,9 @@ public class Ejercicios extends AppCompatActivity implements RadioGroup.OnChecke
         grupo1.setOnCheckedChangeListener(this);
         grupo2 = findViewById(R.id.radioGroup2);
         grupo2.setOnCheckedChangeListener(this);
+
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+        getSupportActionBar().setDisplayShowHomeEnabled(true);
     }
 
     public void Calcular(View view) {

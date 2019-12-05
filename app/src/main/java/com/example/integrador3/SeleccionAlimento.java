@@ -69,6 +69,9 @@ public class SeleccionAlimento extends AppCompatActivity {
         habilitarBusqueda();
 
         cargaInicial = true;
+
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+        getSupportActionBar().setDisplayShowHomeEnabled(true);
     }
 
     private void getAlimentos() {

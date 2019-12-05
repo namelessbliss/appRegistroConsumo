@@ -43,6 +43,9 @@ RadioButton rbthombre, rbtmujer;
            cod = miBundle.getInt("cd");
         }
         //tnom.setText(myPreferences.getString("NB","-"));
+
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+        getSupportActionBar().setDisplayShowHomeEnabled(true);
     }
 
     //metodo calcular

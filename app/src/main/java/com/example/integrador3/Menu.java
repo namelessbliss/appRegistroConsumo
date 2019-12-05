@@ -11,7 +11,7 @@ import android.widget.TextView;
 import androidx.appcompat.app.AppCompatActivity;
 
 public class Menu extends AppCompatActivity {
-    Button btnperfil, btncontrol, btnactividades, btnali, btnRegistroConsumo, btnResumen;
+    Button btnperfil, btncontrol, btnactividades, btnali, btnRegistroConsumo, btnResumen, btnCerrar;
     TextView tnom;
     int usu;
 
@@ -29,6 +29,7 @@ public class Menu extends AppCompatActivity {
         btnali = findViewById(R.id.btn_Alimentos);
         btnRegistroConsumo = findViewById(R.id.btn_Consumo);
         btnResumen = findViewById(R.id.btn_Resumen);
+        btnCerrar = findViewById(R.id.btnCerrarSesion);
         tnom = findViewById(R.id.txtNombre);
 
         btnperfil.setOnClickListener(new View.OnClickListener() {
@@ -80,6 +81,14 @@ public class Menu extends AppCompatActivity {
             }
         });
 
+        btnCerrar.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent i = new Intent(Menu.this, MainActivity.class);
+                i.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TOP);
+                startActivity(i);
+            }
+        });
 
         Bundle miBundle = this.getIntent().getExtras();
 

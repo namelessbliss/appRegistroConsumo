@@ -33,7 +33,8 @@ public class ResumenConsumo extends AppCompatActivity {
         barChart = findViewById(R.id.chart1);
 
         getSetData();
-
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+        getSupportActionBar().setDisplayShowHomeEnabled(true);
     }
 
     private void getSetData() {

@@ -47,8 +47,9 @@ public class RegistroConsumo extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_registro_consumo);
 
-        Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
+        Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar_Alimentos);
         setSupportActionBar(toolbar);
+
         mSqlDb = new BaseDatos(this);
 
         tablaAlimentos = findViewById(R.id.tablaAlimentos);
@@ -74,7 +75,8 @@ public class RegistroConsumo extends AppCompatActivity {
                     tipoConsumo = 4;
             }
         });
-
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+        getSupportActionBar().setDisplayShowHomeEnabled(true);
     }
 
     private void obtenerFechaActual() {

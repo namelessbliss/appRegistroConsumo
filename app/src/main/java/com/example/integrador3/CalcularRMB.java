@@ -54,6 +54,9 @@ public class CalcularRMB extends AppCompatActivity {
                 startActivity(miIntent);
             }
         });
+
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+        getSupportActionBar().setDisplayShowHomeEnabled(true);
     }
 
     //metodo calcular
